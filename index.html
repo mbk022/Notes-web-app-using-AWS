@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+		body{
+			background-color: black;
+			color:white;
+		}
+		form{
+			padding-top:100;
+		}
+		#reg{
+			text-align:center;
+			padding-left:200;
+		}
+		img{
+			padding-left:350px;
+		}
+		h1,h2,p{
+			text-align:center;
+		}
+		a{
+			font-size:20px;
+		}
+		button{
+			background-color:black;
+			padding:15px 30px;
+			color:white;
+			text-align:center;
+			margin:4px 2px;
+		}
+	</style>
+	<script type="text/javascript">
+		
+		function validate(){
+			username=document.getElementById("userid").value;
+			password=document.getElementById("password").value;
+			if(test1(username)){
+				if(test2(password)){
+					return true;
+				}
+			}
+			return false;
+		}
+
+		function test1(username){
+			if(username==""){
+				alert("Please enter Username");
+				return false;
+			}
+			else{
+				return true;
+			}
+		}
+		function test2(password){
+			if(password==""){
+				alert("Please enter Password");
+				return false;
+			}
+			else{
+				return true;
+			}
+		}
+
+
+	</script>
+</head>
+	<body>
+		<table bgcolor="grey" align="center" border="0" cellspacing="0">
+			<tr>
+				<td>
+		<form name="login" method="post" action="login.php">
+			<table  width="100%" align="center" border="0" cellpadding="10">
+				<tr>
+					<td align="center" colspan="3"><strong><h2> USER LOGIN</h2></strong></td>
+				</tr>
+				<tr>
+					<td> UserID </td>
+					<td>:</td>
+					<td><input type="text" id="userid" name="userid"></td>
+				</tr>
+				<tr>
+					<td> Password </td>
+					<td>:</td>
+					<td><input type="Password" id="password" name="password"></td>
+				</tr>
+				<tr>
+					<td colspan="3" align="center"><button type="submit" value="Submit" onclick="return validate()"> Login </td>
+				</tr>
+				<tr>
+					<td colspan="3" align="center"><a href="register.html"> Register Here </a> </td>
+				</tr>
+			</table>
+		</form>
+	</td>
+</tr>
+
+	</body>
+</html>
